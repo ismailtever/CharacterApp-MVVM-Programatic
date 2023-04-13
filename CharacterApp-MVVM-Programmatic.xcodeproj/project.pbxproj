@@ -16,6 +16,8 @@
 		D9A014C229E72D8A001BDC27 /* CharacterApp_MVVM_ProgrammaticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A014C129E72D8A001BDC27 /* CharacterApp_MVVM_ProgrammaticTests.swift */; };
 		D9A014CC29E72D8A001BDC27 /* CharacterApp_MVVM_ProgrammaticUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A014CB29E72D8A001BDC27 /* CharacterApp_MVVM_ProgrammaticUITests.swift */; };
 		D9A014CE29E72D8A001BDC27 /* CharacterApp_MVVM_ProgrammaticUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A014CD29E72D8A001BDC27 /* CharacterApp_MVVM_ProgrammaticUITestsLaunchTests.swift */; };
+		D9A014E229E84943001BDC27 /* RickMortyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A014E129E84943001BDC27 /* RickMortyViewController.swift */; };
+		D9A014E529E855C6001BDC27 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D9A014E429E855C6001BDC27 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		D9A014C729E72D8A001BDC27 /* CharacterApp-MVVM-ProgrammaticUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CharacterApp-MVVM-ProgrammaticUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A014CB29E72D8A001BDC27 /* CharacterApp_MVVM_ProgrammaticUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterApp_MVVM_ProgrammaticUITests.swift; sourceTree = "<group>"; };
 		D9A014CD29E72D8A001BDC27 /* CharacterApp_MVVM_ProgrammaticUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterApp_MVVM_ProgrammaticUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D9A014E129E84943001BDC27 /* RickMortyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9A014E529E855C6001BDC27 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,11 +103,8 @@
 		D9A014A929E72D86001BDC27 /* CharacterApp-MVVM-Programmatic */ = {
 			isa = PBXGroup;
 			children = (
-				D9A014AA29E72D86001BDC27 /* AppDelegate.swift */,
-				D9A014AC29E72D86001BDC27 /* SceneDelegate.swift */,
-				D9A014AE29E72D86001BDC27 /* ViewController.swift */,
-				D9A014B029E72D86001BDC27 /* Main.storyboard */,
-				D9A014B329E72D8A001BDC27 /* Assets.xcassets */,
+				D9A014DB29E848A0001BDC27 /* Features */,
+				D9A014DA29E84899001BDC27 /* Core */,
 				D9A014B529E72D8A001BDC27 /* LaunchScreen.storyboard */,
 				D9A014B829E72D8A001BDC27 /* Info.plist */,
 			);
@@ -127,6 +128,66 @@
 			path = "CharacterApp-MVVM-ProgrammaticUITests";
 			sourceTree = "<group>";
 		};
+		D9A014DA29E84899001BDC27 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D9A014AA29E72D86001BDC27 /* AppDelegate.swift */,
+				D9A014AC29E72D86001BDC27 /* SceneDelegate.swift */,
+				D9A014AE29E72D86001BDC27 /* ViewController.swift */,
+				D9A014B029E72D86001BDC27 /* Main.storyboard */,
+				D9A014B329E72D8A001BDC27 /* Assets.xcassets */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D9A014DB29E848A0001BDC27 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D9A014DC29E848B1001BDC27 /* RickMorty */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D9A014DC29E848B1001BDC27 /* RickMorty */ = {
+			isa = PBXGroup;
+			children = (
+				D9A014E029E84900001BDC27 /* Service */,
+				D9A014DF29E848FB001BDC27 /* Model */,
+				D9A014DE29E848F2001BDC27 /* ViewModel */,
+				D9A014DD29E848EB001BDC27 /* View */,
+			);
+			path = RickMorty;
+			sourceTree = "<group>";
+		};
+		D9A014DD29E848EB001BDC27 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9A014E129E84943001BDC27 /* RickMortyViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D9A014DE29E848F2001BDC27 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D9A014DF29E848FB001BDC27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D9A014E029E84900001BDC27 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +204,9 @@
 			dependencies = (
 			);
 			name = "CharacterApp-MVVM-Programmatic";
+			packageProductDependencies = (
+				D9A014E429E855C6001BDC27 /* SnapKit */,
+			);
 			productName = "CharacterApp-MVVM-Programmatic";
 			productReference = D9A014A729E72D86001BDC27 /* CharacterApp-MVVM-Programmatic.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +279,9 @@
 				Base,
 			);
 			mainGroup = D9A0149E29E72D85001BDC27;
+			packageReferences = (
+				D9A014E329E855C6001BDC27 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = D9A014A829E72D86001BDC27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +328,7 @@
 				D9A014AF29E72D86001BDC27 /* ViewController.swift in Sources */,
 				D9A014AB29E72D86001BDC27 /* AppDelegate.swift in Sources */,
 				D9A014AD29E72D86001BDC27 /* SceneDelegate.swift in Sources */,
+				D9A014E229E84943001BDC27 /* RickMortyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +672,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D9A014E329E855C6001BDC27 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D9A014E429E855C6001BDC27 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9A014E329E855C6001BDC27 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D9A0149F29E72D85001BDC27 /* Project object */;
 }
