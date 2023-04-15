@@ -12,29 +12,35 @@ final class RickMortyViewController: UIViewController {
     
 // MARK: - UI Elements
     private let labelTitle: UILabel = UILabel()
-    private let box: UIView = UIView()
+    private let tableView: UITableView = UITableView()
     private let indicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    private var results: [Result] = []
+    var viewModel: IRickMortyViewModel = RickMortyViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
+        viewModel.setDelegate(outPut: self)
+        viewModel.fetchItems()
     }
     
 // MARK: -
     private func config() {
         view.addSubview(labelTitle)
-        view.addSubview(box)
+        view.addSubview(tableView)
         view.addSubview(indicator)
         drawDesign()
-        makeBox()
+        makeTableView()
         makeLabel()
         makeIndicator()
         }
     private func drawDesign() {
+        tableView.dataSource = self
+        tableView.delegate = self
         DispatchQueue.main.async {
             self.view.backgroundColor = .white
-            self.box.backgroundColor = .red
-            self.labelTitle.text = "text label"
+            self.labelTitle.text = "Rick & Morty"
             self.indicator.color = .red
         }
         
@@ -44,8 +50,8 @@ final class RickMortyViewController: UIViewController {
 }
 // MARK: - Extensions
 extension RickMortyViewController {
-    private func makeBox() {
-        box.snp.makeConstraints { make in
+    private func makeTableView() {
+        tableView.snp.makeConstraints { make in
             make.top.equalTo(labelTitle.snp.bottom).offset(30) //box labeltitle ın altından 30 padding aşağıda
             make.bottom.equalToSuperview()
             make.left.right.equalTo(labelTitle)
@@ -66,4 +72,42 @@ extension RickMortyViewController {
             make.top.equalTo(labelTitle)
         }
     }
+}
+
+extension RickMortyViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return results.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = results[indexPath.row].name ?? ""
+        return cell
+    }
+    
+     
+}
+
+extension RickMortyViewController: RickMortyOutPut {
+    func changeLoading(isLoad: Bool) {
+//        isLoad ? indicator.startAnimating() : indicator.stopAnimating()
+        if isLoad == true {
+            indicator.startAnimating()
+        }else {
+            indicator.stopAnimating()
+        }
+    }
+    
+    func saveDatas(values: [Result]) {
+        results = values
+        tableView.reloadData()
+    }
+    
+     
+}
+
+// MARK: - Protocols
+protocol RickMortyOutPut {
+    func changeLoading(isLoad: Bool)
+    func saveDatas(values: [Result])
 }
