@@ -1,6 +1,6 @@
 # CharacterApp-MVVM-Programatic
 
-A simple two paged programmatic movie listing MVVM app.
+A simple two paged programmatic fictional tv series chacter listing MVVM app.
 
 <p align="center">
 
