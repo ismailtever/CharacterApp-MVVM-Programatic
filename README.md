@@ -1,10 +1,10 @@
 # CharacterApp-MVVM-Programatic
 
-A simple two paged programmatic fictional tv series chacter listing MVVM app.
+A simple two paged programmatic fictional tv series character listing MVVM app.
 
 <p align="center">
 
-<img src="" width="200" height="400">
+<img src="https://user-images.githubusercontent.com/113910333/232572459-1ec80e8f-a670-4688-aa34-d21cb9dcb79f.png" width="200" height="400">
 
 <img src="" width="200" height="400">
 
