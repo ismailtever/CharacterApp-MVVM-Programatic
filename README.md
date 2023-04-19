@@ -4,7 +4,7 @@ A simple one paged programmatic MVVM app for fictional tv series character listi
 
 <p align="center">
 
-<img src="https://user-images.githubusercontent.com/113910333/233091802-3d6a9d7d-b267-4b72-9c02-2c793f5788d1.png)" width="200" height="400">
+<img src="https://user-images.githubusercontent.com/113910333/233091802-3d6a9d7d-b267-4b72-9c02-2c793f5788d1.png" width="200" height="400">
 
 </p>
 
