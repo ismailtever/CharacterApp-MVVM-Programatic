@@ -23,6 +23,7 @@
 		D9A014EC29E8E14A001BDC27 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D9A014EB29E8E14A001BDC27 /* Alamofire */; };
 		D9A014EF29E8E183001BDC27 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = D9A014EE29E8E183001BDC27 /* AlamofireImage */; };
 		D9A014F129EAF1ED001BDC27 /* RickMortyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A014F029EAF1ED001BDC27 /* RickMortyViewModel.swift */; };
+		D9A014F429EEFB60001BDC27 /* RickMortyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A014F329EEFB60001BDC27 /* RickMortyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		D9A014E629E8DD4B001BDC27 /* RickMortyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyService.swift; sourceTree = "<group>"; };
 		D9A014E829E8DD66001BDC27 /* RickMortyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyModel.swift; sourceTree = "<group>"; };
 		D9A014F029EAF1ED001BDC27 /* RickMortyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyViewModel.swift; sourceTree = "<group>"; };
+		D9A014F329EEFB60001BDC27 /* RickMortyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				D9A014E129E84943001BDC27 /* RickMortyViewController.swift */,
+				D9A014F229EEFB1D001BDC27 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -199,6 +202,14 @@
 				D9A014E629E8DD4B001BDC27 /* RickMortyService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		D9A014F229EEFB1D001BDC27 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D9A014F329EEFB60001BDC27 /* RickMortyCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +355,7 @@
 			files = (
 				D9A014E929E8DD66001BDC27 /* RickMortyModel.swift in Sources */,
 				D9A014AF29E72D86001BDC27 /* ViewController.swift in Sources */,
+				D9A014F429EEFB60001BDC27 /* RickMortyCell.swift in Sources */,
 				D9A014AB29E72D86001BDC27 /* AppDelegate.swift in Sources */,
 				D9A014AD29E72D86001BDC27 /* SceneDelegate.swift in Sources */,
 				D9A014E729E8DD4B001BDC27 /* RickMortyService.swift in Sources */,

@@ -38,9 +38,14 @@ final class RickMortyViewController: UIViewController {
     private func drawDesign() {
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.register(RickMortyCell.self, forCellReuseIdentifier: RickMortyCell.Identifier.custom.rawValue)
+        
+        tableView.rowHeight = self.view.frame.height * 0.25
+        
         DispatchQueue.main.async {
             self.view.backgroundColor = .white
             self.labelTitle.text = "Rick & Morty"
+            self.labelTitle.font = .boldSystemFont(ofSize: 20)
             self.indicator.color = .red
         }
         
@@ -80,12 +85,12 @@ extension RickMortyViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = results[indexPath.row].name ?? ""
+        guard let cell: RickMortyCell = tableView.dequeueReusableCell(withIdentifier: RickMortyCell.Identifier.custom.rawValue) as? RickMortyCell else {
+            return UITableViewCell()
+        }
+        cell.saveModel(model: results[indexPath.row])
         return cell
     }
-    
-     
 }
 
 extension RickMortyViewController: RickMortyOutPut {
